@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Five Pizzas</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="res/logo_five_pizzas.png">
+    </header>
+    <div class="main">
+        <img class="bg" src="res/adesivo-pizza.png">
+        <!--formulario da esquerda-->
+        <div class="form">
+            <form action="" id="tamanhoPizza">
+                <!--botoes tamanhos-->
+                <p>Tamanho da pizza</p>
+                <input type="radio" id="pequena" name="tamanhoPizza" value="pequena">
+                <label for="pequena">Pequena (20cm) - R$25,00</label><br>
+                <input type="radio" id="media" name="tamanhoPizza" value="media">
+                <label for="media">Media (25cm) - R$30,00</label><br>
+                <input type="radio" id="gigante" name="tamanhoPizza" value="gigante">
+                <label for="gigante">Gigante (35cm) - R$40,00</label><br>
+                <input type="radio" id="familia" name="tamanhoPizza" value="familia">
+                <label for="familia">Familia (40cm) - R$45,00</label><br>
+            </form>
+            <br>
+            <!--botoes bordas-->
+            <form action="" id="bordaPizza">
+                <p>Tipo de borda</p>
+                <input type="radio" id="gorgonzola" name="bordaPizza" value="gorgonzola">
+                <label for="gorgonzola">Gorgonzola - R$10,00</label><br>
+                <input type="radio" id="provolone" name="bordaPizza" value="provolone">
+                <label for="provolone">Provolone - R$8,00</label><br>
+                <input type="radio" id="catupiry" name="bordaPizza" value="catupiry">
+                <label for="catupiry">Catupiry - R$5,00</label><br>
+                <input type="radio" id="cheddar" name="bordaPizza" value="cheddar">
+                <label for="cheddar">Cheddar - R$5,00</label><br>
+                <input type="radio" id="semBorda" name="bordaPizza" value="semBorda">
+                <label for="semBorda">Sem borda</label><br>
+            </form>
+            <br>
+            <!--botoes sabores-->
+            <form action="" id="sabores">
+                <p>Sabores (Apenas 2 sabores por pizza)</p>
+                <input onclick="testSabores(this, 'calabresa')" type="checkbox" id="calabresa" name="sabores" value="calabresa">
+                <label id="label" for="calabresa">Calabresa</label><br>
+                <span>- Mussarela, Calabresa e Cebola</span><br>
+                <input onclick="testSabores(this, '4queijos')" type="checkbox" id="4queijos" name="sabores" value="4queijos">
+                <label id="label" for="4queijos">4 Queijos</label><br>
+                <span>- Mussarela, Cheddar, Parmesão e Prato</span><br>
+                <input onclick="testSabores(this, 'frangoCatupiry')" type="checkbox" id="frangoCatupiry" name="sabores" value="frangoCatupiry">
+                <label id="label" for="frangoCatupiry">Frango com Catupiry</label><br>
+                <span>- Mussarela, Frango e Catupiry</span><br>
+                <input onclick="testSabores(this, 'portuguesa')" type="checkbox" id="portuguesa" name="sabores" value="portuguesa">
+                <label id="label" for="portuguesa">Portuguesa</label><br>
+                <span>- Mussarela, Pimentão, Cebola, Presunto, Ovo e Cebola</span><br>
+                <input onclick="testSabores(this, 'camarao')" type="checkbox" id="camarao" name="sabores" value="camarao">
+                <label id="label" for="camarao">Camarão</label><br>
+                <span>- Mussarela, Camarão, Salsinha e Cebolinha</span><br>
+                <input onclick="testSabores(this, 'carneSeca')" type="checkbox" id="carneSeca" name="sabores" value="carneSeca">
+                <label id="label" for="carneSeca">Carne seca</label><br>
+                <span>- Mussarela, Carne seca e Cream Cheese</span><br>
+                <input onclick="testSabores(this, 'lomboCanadense')" type="checkbox" id="lomboCanadense" name="sabores" value="lomboCanadense">
+                <label id="label" for="lomboCanadense">Lombo Canadense</label><br>
+                <span>- Mussarela, Lombo Canadense, Tomate, Orégano e Cebola</span><br>
+                <input onclick="testSabores(this, 'xFritas')" type="checkbox" id="xFritas" name="sabores" value="xFritas">
+                <label id="label" for="xFritas">X-Fritas</label><br>
+                <span style="padding-bottom: 70px;">- Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola e Batata Frita</span><br>
+            </form>
+        </div>
+        <!--formulario da direita-->
+        <div class="form" style="margin-left: 500px;">
+            <!--botoes bebidas-->
+            <form action="" id="bebidas">
+                <p>Bebidas</p>
+                <input type="radio" id="cocaCola" name="bebidas" value="cocaCola">
+                <label for="cocaCola">Coca-Cola - R$12,00</label><br>
+                <input type="radio" id="fanta" name="bebidas" value="fanta">
+                <label for="fanta">Fanta - R$10,00</label><br>
+                <input type="radio" id="guarana" name="bebidas" value="guarana">
+                <label for="guarana">Guaraná Antarctica - R$10,00</label><br>
+                <input type="radio" id="h2o" name="bebidas" value="h2o">
+                <label for="h2o">H2O - R$8,00</label><br>
+                <input type="radio" id="delValle" name="bebidas" value="delValle">
+                <label for="delValle">Del Valle - R$7,00</label><br>
+                <input type="radio" id="semBebida" name="bebidas" value="semBebida">
+                <label for="semBebida">Nenhuma</label><br>
+            </form>
+            <br>
+            <form action="" id="tipoEntrega">
+                <p>Tipo de entrega</p>
+                <input type="radio" id="retirada" name="tipoEntrega" value="retirada">
+                <label for="retirada">Retirada no Balcão</label><br>
+                <input type="radio" id="delivery" name="tipoEntrega" value="delivery">
+                <label for="delivery">Delivery - R$5,00</label><br><br>
+            </form>
+            
+                <!--botao enviar-->
+            <input onclick="enviar()" type="submit">
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+</body>
+</html>
